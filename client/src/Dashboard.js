@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import useAuth from './useAuth'
 import Player from './Player'
-import PlaylistBar from './PlaylistBar'
+import PlaylistFetch from './PlaylistFetch'
 
 export default function Dashboard({ code }) {
     const accessToken = useAuth(code)
@@ -12,7 +12,7 @@ export default function Dashboard({ code }) {
                 <h1>
                     This is where we will put our wireframe design
                 </h1>
-                <PlaylistBar accessToken={accessToken}/>
+                <PlaylistFetch accessToken={accessToken}/>
             </div>
             <div>
                 {/* <Player accessToken={accessToken} /> */}
