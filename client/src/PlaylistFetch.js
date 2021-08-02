@@ -5,7 +5,7 @@ import PlaylistContainer from './PlaylistContainer'
 
 export default function PlaylistFetch({ accessToken }) {
     
-    const [playlistResp , setPlaylistResp] = useState([])// will hold response from playlist get
+    const [playlistResp , setPlaylistResp] = useState(null)// will hold response from playlist get
 
     console.log(accessToken)
 
@@ -27,9 +27,9 @@ export default function PlaylistFetch({ accessToken }) {
     
     if(!accessToken) return null
 
+    console.log(playlistResp)
+
     return (
-        <>
-        <PlaylistContainer playlistResp = {playlistResp}/>
-        </>
+        playlistResp ? <PlaylistContainer playlistResp={playlistResp} /> : <h1>Loading Playlists...</h1>
     )
 }

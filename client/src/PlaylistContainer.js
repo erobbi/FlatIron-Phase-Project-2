@@ -3,11 +3,7 @@ import PlaylistRender from './PlaylistRender';
 
 function PlaylistContainer({playlistResp}) {
     console.log({playlistResp})
-    const playlistList = []
-    if(playlistResp!=null){
-        playlistList = playlistResp.data.items
-        console.log(playlistList)
-    }
+    const playlistList = playlistResp.data.items
     return (
         <div>
             {
