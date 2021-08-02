@@ -6,6 +6,7 @@ function PlaylistContainer({playlistResp}) {
     const playlistList = playlistResp.data.items
     return (
         <div>
+            <h3>Recommended Playlists</h3>
             {
             playlistList.map(playlist => <PlaylistRender key={playlist.id} playlist={playlist}/>)
             }
